@@ -1,10 +1,14 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `김진규 블로그`,
+    description: ``,
+    author: `김진규`,
+    url: "https://redpeanut.github.io",
+    social: {
+      email: "jkkim80.dev@gmail.com",
+      //twitterUsername: "",
+      githubUsername: "RedPeanut",
+    },
+  },
   plugins: [],
 }

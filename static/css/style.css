@@ -1,0 +1,25 @@
+@import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+
+* {/* font-family:'Spoqa Han Sans','Sans-serif'; */font-family: "Helvetica Neue",Helvetica,Arial, sans-serif;box-sizing:border-box;padding:0;margin:0;color:rgb(61,61,63);}
+html,body {}
+a {text-decoration:none;}
+
+header {padding:0 8px;height:56px;border-bottom:1px solid rgb(230,230,230);display:flex;align-items:center;}
+header h1 {display:inline-block;}
+header h1 a {font-weight:bold;font-size:24px;}
+header nav {margin-left:16px;display:inline-block;}
+header nav ul li {float:left;list-style:none;}
+header nav ul li a {font-weight:300;padding:8px;}
+
+section {padding:40px 20px;position:relative;}
+section.career {display:flex;}
+section.career div {width:50%;display:inline-block;}
+section.career div .item {margin:16px 0;display:block;width:100%;}
+section.career div .item b {}
+section.career div .item .period {}
+section.career div .item .period::before {content:'|';margin:0 8px;}
+section.career div .item .position {display:block;margin-top:16px;}
+
+section.interest .line {margin:16px 0;display:block;width:100%;}
+
+footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
