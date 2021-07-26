@@ -1,15 +1,23 @@
-@import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+/* @import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"); */
 
-* {/* font-family:'Spoqa Han Sans','Sans-serif'; */font-family: "Helvetica Neue",Helvetica,Arial, sans-serif;box-sizing:border-box;padding:0;margin:0;color:rgb(61,61,63);}
+* {/* font-family:'Spoqa Han Sans','Sans-serif'; */font-family:"Helvetica Neue",Helvetica,Arial, sans-serif;box-sizing:border-box;padding:0;margin:0;color:rgb(61,61,63);}
 html,body {}
 a {text-decoration:none;}
+li {list-style:none;}
 
-header {padding:0 8px;height:56px;border-bottom:1px solid rgb(230,230,230);display:flex;align-items:center;}
+header {position:relative;padding:0 8px;height:40px;border-bottom:1px solid rgb(230,230,230);}
 header h1 {display:inline-block;}
 header h1 a {font-weight:bold;font-size:24px;}
 header nav {margin-left:16px;display:inline-block;}
-header nav ul li {float:left;list-style:none;}
+header nav ul li {float:left;}
 header nav ul li a {font-weight:300;padding:8px;}
+header nav ul li a.active {font-weight:bold;}
+header ul.contacts {position:absolute;right:5px;top:0;line-height:40px;}
+header ul.contacts li {float:left;}
+header ul.contacts li {line-height:32px;text-align:center;width:32px;height:32px;margin:4px 2px;border-radius:50%;border:1px solid #ebebeb;}
+header ul.contacts li a svg {display:inline-block;width:16px;height:16px;margin:0 3px;}
+header ul.contacts li a svg {fill:#222;}
+header ul.contacts li a:hover svg {fill:#5d93ff;}
 
 section {padding:40px 20px;position:relative;}
 section.career {display:flex;}

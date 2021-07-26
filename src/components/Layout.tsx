@@ -1,15 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import { Helmet } from 'react-helmet'
-import Header from "./Header"
-import style from "../../static/css/style.css"
-import * as Styled from "./Layout.styled"
+import "../../static/css/style.css"
+import Icon from "./Icon"
+import ICONS from "../utils/icons"
+import { Link } from "gatsby"
 
 export default function Layout({ children }) {
   return (
     <>
       <Helmet>
         <title>김진규블로그</title>
-        <link rel="stylesheet" href={style} />
+        {/* <link rel="stylesheet" href={style} /> */}
       </Helmet>
       {/* <Styled.GlobalStyle /> */}
       { children }
@@ -25,58 +26,50 @@ export function PlainLayout({ children }) {
   )
 }
 
-export function HomeLayout({ children }) {
+interface HomeLayoutProps {
+  index: number
+  children: any
+}
+
+export function HomeLayout({ index = 0, children }: HomeLayoutProps) {
+
+  //const [selected, setSelected] = useState(0)
+  console.log("index = " + index)
+
   return (
     <Layout>
       <header>
-          <h1>
-            <a className="" href="/">김진규블로그</a>
-          </h1>
-          <nav>
-            <ul>
-              <li><a href=""><i></i>About</a></li>
-              <li><a href=""><i></i>Blog</a></li>
-              <li><a href=""><i></i>Gallery</a></li>
-            </ul>
-          </nav>
+        <h1>
+          <a className="" href="/">김진규블로그</a>
+        </h1>
+        <nav>
+          <ul>
+            <li><Link to="/about" className={index == 0 ? 'active' : ''}>About</Link></li>
+            <li><Link to="/blog" className={index == 1 ? 'active' : ''}>Blog</Link></li>
+            <li><Link to="/gallery" className={index == 2 ? 'active' : ''}>Gallery</Link></li>
+            {/* <li><a href="/about" className={index == 0 ? 'active' : ''}>About</a></li>
+            <li><a href="/blog" className={index == 1 ? 'active' : ''}>Blog</a></li>
+            <li><a href="/gallery" className={index == 2 ? 'active' : ''}>Gallery</a></li> */}
+          </ul>
+        </nav>
+        <ul className="contacts">
+          <li>
+            <a href="mailto:zamong99@gmail.com" target="_blank">
+              <Icon name="email" icon={ICONS['EMAIL']}/>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/RedPeanut/RedPeanut.github.io.src" target="_blank">
+              <Icon name="github" icon={ICONS['GITHUB']}/>
+            </a>
+          </li>
+        </ul>
       </header>
-      <section className="career">
-        <div>
-          <h1>경력</h1>
-          <div className="item">
-            <b>디큐</b><span className="period">2017.02. - 현재</span>
-            <span className="position">웹개발</span>
-          </div>
-          <div className="item">
-            <b>필아이티</b><span className="period">2013.02. - 2017.02.</span>
-            <span className="position">앱개발</span>
-          </div>
-          <div className="item">
-            <b>인스모바일</b><span className="period">2008.12. - 2012.12.</span>
-            <span className="position">앱개발</span>
-          </div>
-          <div className="item">
-            <b>마루인포</b><span className="period">2008.03. - 2008.10.</span>
-            <span className="position">앱개발</span>
-          </div>
-        </div>
-        <div>
-          <h1>학력</h1>
-          <div className="item">
-            <b>건국대학교</b><span className="period">1999. - 2006.</span>
-            <span className="position">전기공학과 학사</span>
-          </div>
-        </div>
-      </section>
-      <section className="interest">
-        <h1>관심분야</h1>
-        <div className="line">
-          Keyword, Keyword, Keyword, Keyword, Keyword
-        </div>
-      </section>
+      { children }
       <footer>
         © 2021 by 김진규. All right reserved.
       </footer>
     </Layout>
   )
 }
+
