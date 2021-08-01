@@ -5,29 +5,34 @@ html,body {}
 a {text-decoration:none;}
 li {list-style:none;}
 
-header {position:relative;padding:0 8px;height:40px;border-bottom:1px solid rgb(230,230,230);}
-header h1 {display:inline-block;}
+header {position:relative;padding:0 8px;height:56px;border-bottom:1px solid rgb(230,230,230);}
+header h1 {display:inline-block;line-height:56px;}
 header h1 a {font-weight:bold;font-size:24px;}
 header nav {margin-left:16px;display:inline-block;}
 header nav ul li {float:left;}
 header nav ul li a {font-weight:300;padding:8px;}
 header nav ul li a.active {font-weight:bold;}
-header ul.contacts {position:absolute;right:5px;top:0;line-height:40px;}
+header ul.contacts {position:absolute;right:5px;top:8px;line-height:40px;}
 header ul.contacts li {float:left;}
-header ul.contacts li {line-height:32px;text-align:center;width:32px;height:32px;margin:4px 2px;border-radius:50%;border:1px solid #ebebeb;}
+header ul.contacts li {line-height:40px;text-align:center;width:40px;height:40px;margin:0 2px;border-radius:50%;border:1px solid #ebebeb;}
 header ul.contacts li a svg {display:inline-block;width:16px;height:16px;margin:0 3px;}
 header ul.contacts li a svg {fill:#222;}
 header ul.contacts li a:hover svg {fill:#5d93ff;}
-
-section {padding:40px 20px;position:relative;}
-section.career {display:flex;}
-section.career div {width:50%;display:inline-block;}
-section.career div .item {margin:16px 0;display:block;width:100%;}
-section.career div .item b {}
-section.career div .item .period {}
-section.career div .item .period::before {content:'|';margin:0 8px;}
-section.career div .item .position {display:block;margin-top:16px;}
-
-section.interest .line {margin:16px 0;display:block;width:100%;}
-
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
+.wrap {max-width:1024px;margin: 0 auto;}
+header .wrap {position:relative;}
+
+.about section {padding:20px 20px;position:relative;}
+.about section .line {margin:16px 0;display:block;width:100%;}
+.about section.career {background-color:rgb(248,249,250);}
+.about section.career .wrap {display:flex;}
+.about section.career .wrap div {width:50%;display:inline-block;}
+.about section.career .wrap div .item {margin:16px 0;display:block;width:100%;}
+.about section.career .wrap div .item b {}
+.about section.career .wrap div .item .period {}
+.about section.career .wrap div .item .period::before {content:'|';margin:0 8px;}
+.about section.career .wrap div .item .position {display:block;margin-top:16px;}
+
+.blog {}
+.gallery {}
+.portfolio {}
