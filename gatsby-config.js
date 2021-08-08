@@ -10,5 +10,22 @@ module.exports = {
       githubUsername: "RedPeanut",
     },
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-images',
+          'gatsby-remark-prismjs',
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/posts/`
+      },
+    },
+  ],
 }
