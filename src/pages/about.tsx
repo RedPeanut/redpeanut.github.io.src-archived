@@ -39,7 +39,10 @@ export default function index() {
           <div className="wrap">
             <h1>보유기술</h1>
             <div className="line">
-              Android, Java, Spring, myBatis, Eclipse
+              모바일: Android, Java, Eclipse
+            </div>
+            <div className="line">
+              웹: Java, JSP, Spring, myBatis, Eclipse
             </div>
           </div>
         </section>
@@ -47,7 +50,7 @@ export default function index() {
           <div className="wrap">
             <h1>그외</h1>
             <div className="line">
-              Svn, Git, DB 마이그레이션, Linux, Apache, Tomcat, C, HTML, CSS, Javascript
+              Svn, Git, DB 마이그레이션, Linux, Apache, Tomcat, C, HTML, CSS, Javascript(include jQuery)
             </div>
           </div>
         </section>
@@ -55,7 +58,7 @@ export default function index() {
           <div className="wrap">
             <h1>관심분야</h1>
             <div className="line">
-              Node
+              Node, Typescript
             </div>
           </div>
         </section>

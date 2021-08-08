@@ -19,7 +19,9 @@ header ul.contacts li a svg {display:inline-block;width:16px;height:16px;margin:
 header ul.contacts li a svg {fill:#222;}
 header ul.contacts li a:hover svg {fill:#5d93ff;}
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
+
 .wrap {max-width:1024px;margin: 0 auto;}
+
 header .wrap {position:relative;}
 
 .about section {padding:20px 20px;position:relative;}
