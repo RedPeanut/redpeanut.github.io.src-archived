@@ -1,19 +1,46 @@
+import React from 'react'
+import { HomeLayout } from "../components/Layout"
+import { graphql } from 'gatsby'
 
-function Post({ data: { markdownRemark } }) {
+export const pageQuery = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      excerpt
+      timeToRead
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        date(formatString: "YYYY년 MM월 DD일")
+      }
+    }
+  }
+`
+
+export default function index({ data: { markdownRemark } }) {
 
   const {
-    frontmatter: { title, summary, date },
+    frontmatter: { title, date },
     timeToRead,
     html,
   } = markdownRemark
   
   return (
-    <>
-      <h1>{title}</h1>
-      <p>{date} • {timeToRead}분</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </>
+    <HomeLayout index={1}>
+      <div className="blog">
+        <div className="wrap">
+          <div className="left category list"></div>
+          <div className="main post read">
+            <h1 className="title">{title}</h1>
+            <p className="meta">{date} • {timeToRead}분</p>
+            <div className="content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
+        </div>
+      </div>
+    </HomeLayout>
   )
 }

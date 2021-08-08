@@ -50,7 +50,7 @@ export default function index() {
           <div className="wrap">
             <h1>그외</h1>
             <div className="line">
-              Svn, Git, DB 마이그레이션, Linux, Apache, Tomcat, C, HTML, CSS, Javascript(include jQuery)
+              Svn, Git, DB 마이그레이션, Linux, Apache, Tomcat, C, HTML, CSS, Javascript(∝ jQuery)
             </div>
           </div>
         </section>

@@ -43,10 +43,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const slug = getSlug(node, getNode)
     createNodeField({ name: `slug`, value: slug, node })
-    const date = getDate(node, getNode)
-    createNodeField({ name: `date`, value: date, node })
-    if (!slug || !date) {
-      throw "No slug or date!!"
+    //const date = getDate(node, getNode)
+    //createNodeField({ name: `date`, value: date, node })
+    if (!slug /* || !date */) {
+      throw "No slug!"
     }
   }
 }
@@ -54,6 +54,30 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  /* not make page */
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `).then(result => {
+    const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach(({ node: { fields: { slug } } }) => {
+      createPage({
+        path: slug,
+        component: path.resolve(__dirname, 'src', 'templates', 'post.tsx'),
+        context: {
+          slug,
+        },
+      })
+    })
+  })
 
 }

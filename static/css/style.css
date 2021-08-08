@@ -22,7 +22,7 @@ footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(
 
 .wrap {max-width:1024px;margin: 0 auto;}
 
-header .wrap {position:relative;}
+/* header .wrap {position:relative;} */
 
 .about section {padding:20px 20px;position:relative;}
 .about section .line {margin:16px 0;display:block;width:100%;}
@@ -36,5 +36,13 @@ header .wrap {position:relative;}
 .about section.career .wrap div .item .position {display:block;margin-top:16px;}
 
 .blog {}
+.blog .post.list .item {margin:56px 0;}
+.blog .post.list .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
+.blog .post.list .item p.meta {}
+.blog .post.list .item p.summary {}
+.blog .post.read {padding:48px 8px;}
+.blog .post.read h1.title {font-size:42px;}
+.blog .post.read p.meta {color:gray;margin-bottom:42px;}
+
 .gallery {}
 .portfolio {}

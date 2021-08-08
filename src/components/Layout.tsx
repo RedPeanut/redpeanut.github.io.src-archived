@@ -25,7 +25,7 @@ export default function Layout({ className, children }) {
 
 export function PlainLayout({ children }) {
   return (
-    <Layout>
+    <Layout className="plain layout">
       { children }
     </Layout>
   )
@@ -39,7 +39,7 @@ interface HomeLayoutProps {
 export function HomeLayout({ index = 0, children }: HomeLayoutProps) {
 
   //const [selected, setSelected] = useState(0)
-  console.log("index = " + index)
+  //console.log("index = " + index)
 
   return (
     <Layout className="home layout">
