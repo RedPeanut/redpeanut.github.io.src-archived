@@ -12,18 +12,18 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
-          'gatsby-remark-images',
-          'gatsby-remark-prismjs',
+          "gatsby-remark-images",
+          "gatsby-remark-prismjs",
         ],
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'posts',
+        name: "posts",
         path: `${__dirname}/posts/`
       },
     },

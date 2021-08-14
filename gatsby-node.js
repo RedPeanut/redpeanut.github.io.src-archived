@@ -1,10 +1,10 @@
-const path = require('path')
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require("path")
+const { createFilePath } = require("gatsby-source-filesystem")
 
 function getSlug(node, getNode) {
   // 파일이름이 yyyy-mm-dd로 시작하면 이를 사용한다.
   // yyyy-mm-dd-jekyll-to-gatsby.md -> yyyy-mm-dd-jekyll-to-gatsby
-  const base = path.parse(node.fileAbsolutePath).name // '2020-07-22-jekyll-to-gatsby'
+  const base = path.parse(node.fileAbsolutePath).name // "2020-07-22-jekyll-to-gatsby"
   const ptn = /^(\d\d\d\d)-(\d\d)-(\d\d)-(.+)/
   const hasDate = ptn.test(base)
   if (hasDate) {
@@ -27,7 +27,7 @@ function getDate(node, getNode) {
 
   // 파일이름이 yyyy-mm-dd로 시작하면 이를 사용한다.
   // yyyy-mm-dd-jekyll-to-gatsby.md -> yyyy-mm-dd-jekyll-to-gatsby
-  const base = path.parse(node.fileAbsolutePath).name // '2020-07-22-jekyll-to-gatsby'
+  const base = path.parse(node.fileAbsolutePath).name // "2020-07-22-jekyll-to-gatsby"
   const ptn = /^(\d\d\d\d)-(\d\d)-(\d\d)-(.+)/
   const hasDate = ptn.test(base)
   if (hasDate) {
@@ -38,9 +38,9 @@ function getDate(node, getNode) {
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  //console.log('' + node.internal.type)
+  //console.log("" + node.internal.type)
   const { createNodeField } = actions
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === "MarkdownRemark") {
     const slug = getSlug(node, getNode)
     createNodeField({ name: `slug`, value: slug, node })
     //const date = getDate(node, getNode)
@@ -72,7 +72,7 @@ exports.createPages = ({ graphql, actions }) => {
     posts.forEach(({ node: { fields: { slug } } }) => {
       createPage({
         path: slug,
-        component: path.resolve(__dirname, 'src', 'templates', 'post.tsx'),
+        component: path.resolve(__dirname, "src", "templates", "post.tsx"),
         context: {
           slug,
         },

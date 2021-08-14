@@ -32,9 +32,13 @@ function PostListItem({
       <Link to={node.fields.slug} className="">
         <h2 className="title">{node.frontmatter.title}</h2>
         <p className="meta"></p>
-        {node.excerpt && (<p className="summary">
-          {node.excerpt}
-        </p>)}
+        {
+          node.excerpt && (
+            <p className="summary">
+              {node.excerpt}
+            </p>
+          )
+        }
       </Link>
     </li>
   )
