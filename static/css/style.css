@@ -21,6 +21,11 @@ header ul.contacts li {line-height:40px;text-align:center;width:40px;height:40px
 header ul.contacts li a svg {display:inline-block;width:16px;height:16px;margin:0 3px;}
 header ul.contacts li a svg {fill:#222;}
 header ul.contacts li a:hover svg {fill:#5d93ff;}
+
+@media (max-width:768px) {
+	header ul.contacts {display:none;}
+}
+
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
 
 .about section {padding:20px 20px;position:relative;}
