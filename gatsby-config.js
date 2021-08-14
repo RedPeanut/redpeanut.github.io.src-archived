@@ -5,7 +5,7 @@ module.exports = {
     author: `김진규`,
     url: "https://redpeanut.github.io",
     social: {
-      email: "jkkim80.dev@gmail.com",
+      email: "zamong99@gmail.com",
       //twitterUsername: "",
       githubUsername: "RedPeanut",
     },
