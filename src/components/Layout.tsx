@@ -60,7 +60,7 @@ export function HomeLayout({ index = 0, children }: HomeLayoutProps) {
             </nav>
             <ul className="contacts">
               <li>
-                <a href="mailto:zamong99@gmail.com" target="_blank">
+                <a href="mailto:kimjk80.dev@gmail.com" target="_blank">
                   <Icon name="email" icon={ICONS['EMAIL']}/>
                 </a>
               </li>

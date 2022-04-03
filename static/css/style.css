@@ -5,9 +5,7 @@ html,body {}
 a {text-decoration:none;}
 li {list-style:none;}
 
-.wrap {max-width:1024px;margin: 0 auto;}
-
-header .wrap {position:relative;}
+header .wrap {position:relative;max-width:1024px;margin:0 auto;}
 header {position:relative;padding:0 8px;height:56px;border-bottom:1px solid rgb(230,230,230);}
 header h1 {display:inline-block;line-height:56px;}
 header h1 a {font-weight:bold;font-size:24px;}
@@ -27,7 +25,9 @@ header ul.contacts li a:hover svg {fill:#5d93ff;}
 }
 
 footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(230,230,230);}
+footer .wrap {max-width:1024px;margin:0 auto;}
 
+.about .wrap {max-width:1024px;margin:0 auto;}
 .about section {padding:20px 20px;position:relative;}
 .about section .line {margin:16px 0;display:block;width:100%;}
 .about section.career {background-color:rgb(248,249,250);}
@@ -40,6 +40,7 @@ footer {text-align:center;font-size:14px;padding:8px 0;border-top:1px solid rgb(
 .about section.career .wrap div .item .position {display:block;margin-top:16px;}
 
 .blog {}
+.blog .wrap {max-width:1024px;margin:0 auto;}
 .blog .post.list .item {margin:56px 0;}
 .blog .post.list .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
 .blog .post.list .item p.meta {}
