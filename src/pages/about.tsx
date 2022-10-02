@@ -11,7 +11,7 @@ export default function index() {
               <h1>경력</h1>
               <div className="item">
                 <b>더존비즈온</b><span className="period">2021.09. - 현재</span>
-                <span className="position">메일서비스 백엔드(선임연구원)</span>
+                <span className="position">로그인,회원가입 백엔드(선임연구원)</span>
               </div>
               <div className="item">
                 <b>디큐</b><span className="period">2017.02. - 2021.09.</span>
