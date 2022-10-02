@@ -49,5 +49,14 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .blog .post.read h1.title {font-size:42px;}
 .blog .post.read p.meta {color:gray;margin-bottom:42px;}
 
+.blog .post.read .content {font-size:16px;line-height:1.4em;word-break:break-word;}
+.blog .post.read .content h1 {font-size:200%;margin-top:1.5em;margin:1.5em 0px 0.67em;}
+.blog .post.read .content p {}
+.blog .post.read .content p a {color:blue;}
+.blog .post.read .content p a:hover {text-decoration:underline;}
+.blog .post.read .content figure figcaption {text-align:center;}
+.blog .post.read .content ul {padding-left:40px;}
+.blog .post.read .content ul li {list-style:disc;}
+
 .gallery {}
 .portfolio {}
