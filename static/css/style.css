@@ -49,14 +49,44 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .blog .post.read h1.title {font-size:42px;}
 .blog .post.read p.meta {color:gray;margin-bottom:42px;}
 
-.blog .post.read .content {font-size:16px;line-height:1.4em;word-break:break-word;}
-.blog .post.read .content h1 {font-size:200%;margin-top:1.5em;margin:1.5em 0px 0.67em;}
-.blog .post.read .content p {}
-.blog .post.read .content p a {color:blue;}
-.blog .post.read .content p a:hover {text-decoration:underline;}
-.blog .post.read .content figure figcaption {text-align:center;}
-.blog .post.read .content ul {padding-left:40px;}
-.blog .post.read .content ul li {list-style:disc;}
+.blog .post.read .content {}
+
+.markdown-body {font-size:16px;line-height:1.4em;word-break:break-word;}
+.markdown-body h1 {font-size:200%;margin-top:1.5em;margin:1.5em 0px 0.67em;}
+.markdown-body a {color:blue;}
+.markdown-body a:hover {text-decoration:underline;}
+.markdown-body p {}
+.markdown-body figure figcaption {text-align:center;}
+.markdown-body ul {padding-left:40px;}
+.markdown-body ul li {list-style:disc;}
+
+.markdown-body h1 {font-size: 2em;}
+.markdown-body h2 {font-size: 1.5em;}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+	border-bottom: 1px solid #d8dee4;
+	margin-top: 24px;
+	padding-bottom: .3em;
+	margin-bottom: 16px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.markdown-body>*:first-child {margin-top: 0;}
+.markdown-body>*:last-child {margin-bottom: 0;}
+
+.markdown-body .highlight {}
+.markdown-body .highlight pre, .markdown-body pre {
+	padding: 16px;
+	margin-bottom: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f6f8fa;
+	border-radius: 6px;
+}
+
+.markdown-body pre .token.comment {color:#6e7781}
 
 .gallery {}
 .portfolio {}
