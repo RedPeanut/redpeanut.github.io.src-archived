@@ -53,6 +53,7 @@ export function HomeLayout({ index = 0, children }: HomeLayoutProps) {
                 <li><Link to="/about" className={index == 0 ? 'active' : ''}>About</Link></li>
                 <li><Link to="/blog" className={index == 1 ? 'active' : ''}>Blog</Link></li>
                 <li><Link to="/gallery" className={index == 2 ? 'active' : ''}>Gallery</Link></li>
+                <li><Link to="/tools" className={index == 3 ? 'active' : ''}>Tools</Link></li>
                 {/* <li><Link to="/gallery" className={index == 2 ? 'active' : ''}>Gallery</Link></li> */}
                 {/* <li><a href="/about" className={index == 0 ? 'active' : ''}>About</a></li>
                 <li><a href="/blog" className={index == 1 ? 'active' : ''}>Blog</a></li>
