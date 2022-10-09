@@ -20,13 +20,15 @@ export const pageQuery = graphql`
   }
 `
 
-export default function index({ data: { markdownRemark } }) {
+export default function index({ data, pageContext }) {
 
+  const { markdownRemark, gallery } = data
   const {
     frontmatter: { title, date, category },
     timeToRead,
     html,
   } = markdownRemark
+  const { previous, next } = pageContext
   
   return (
     <HomeLayout index={markdownRemark.frontmatter.category == 'gallery' ? 2 : 1}>

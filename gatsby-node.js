@@ -67,14 +67,17 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    const posts = result.data.allMarkdownRemark.edges
+    //const posts = result.data.allMarkdownRemark.edges
+    const nodes = result.data.allMarkdownRemark.edges.map(e => e.node)
 
-    posts.forEach(({ node: { fields: { slug } } }) => {
+    nodes.forEach(({fields:{slug}}, index) => {
       createPage({
         path: slug,
         component: path.resolve(__dirname, "src", "templates", "post.tsx"),
         context: {
           slug,
+          previous: index === nodes.length - 1 ? null : nodes[index + 1],
+          next: index === 0 ? null : nodes[index - 1],
         },
       })
     })
