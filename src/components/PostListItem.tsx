@@ -10,6 +10,7 @@ interface Frontmatter {
   description: string
   tags?: string[]
   category?: string
+  link?: string
 }
 
 interface Node {
@@ -27,21 +28,34 @@ interface PostListItemProps {
 function PostListItem({
   node
 }: PostListItemProps) {
-  return (
-    <li className="item">
-      <Link to={node.fields.slug} className="">
-        <h2 className="title">{node.frontmatter.title}</h2>
-        <p className="meta"></p>
-        {
-          node.excerpt && (
-            <p className="summary">
-              {node.excerpt}
-            </p>
-          )
-        }
-      </Link>
-    </li>
-  )
+
+  if(node.frontmatter.link != null && node.frontmatter.link != "") {
+    return (
+      <li className="item">
+        <a href={node.frontmatter.link} className="" target="_blank">
+          <h2 className="title">{node.frontmatter.title}
+            <span className="newwindow"></span>
+          </h2>
+        </a>
+      </li>
+    )
+  } else {
+    return (
+      <li className="item">
+        <a href={node.fields.slug} className="">
+          <h2 className="title">{node.frontmatter.title}</h2>
+          {/* <p className="meta"></p> */}
+          {
+            node.excerpt && (
+              <p className="summary">
+                {node.excerpt}
+              </p>
+            )
+          }
+        </a>
+      </li>
+    )
+  }
 }
 
 export default PostListItem

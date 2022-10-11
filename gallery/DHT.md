@@ -5,7 +5,7 @@ layout: 레이아웃명
 category: gallery
 thumbnail: 썸네일이미지.jpg
 summary: 
-tags: [태그1,태그2]
+tags: [dht,java]
 ---
 
 # 중제목

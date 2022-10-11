@@ -43,6 +43,13 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .blog .wrap {max-width:1024px;margin:0 auto;}
 .blog .post.list .item {margin:56px 0;}
 .blog .post.list .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
+.blog .post.list .item .newwindow {
+	display: inline-block;
+    min-height: 12px;
+    padding: 0 15px 0 3px;
+    background: url(../img/newwindow-icon.png) no-repeat right center;
+    vertical-align: middle;
+}
 .blog .post.list .item p.meta {}
 .blog .post.list .item p.summary {}
 .blog .post.read {padding:48px 8px;}
