@@ -45,8 +45,9 @@ footer .wrap {max-width:1024px;margin:0 auto;}
 .blog .post.list .item h2 {color:rgb(205,85,84);margin-bottom:8px;}
 .blog .post.list .item .newwindow {
 	display: inline-block;
-    min-height: 12px;
-    padding: 0 15px 0 3px;
+    min-height: 10px;
+    padding: 0 18px 0 0px;
+	margin-bottom: 5px;
     background: url(../img/newwindow-icon.png) no-repeat right center;
     vertical-align: middle;
 }
