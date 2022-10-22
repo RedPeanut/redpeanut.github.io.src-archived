@@ -1,5 +1,5 @@
 import React from 'react'
-import { HomeLayout } from "../components/Layout"
+import { MainLayout } from "../components/Layout"
 import { graphql } from 'gatsby'
 
 export const pageQuery = graphql`
@@ -31,7 +31,7 @@ export default function index({ data, pageContext }) {
   const { previous, next } = pageContext
   
   return (
-    <HomeLayout index={markdownRemark.frontmatter.category == 'gallery' ? 2 : 1}>
+    <MainLayout index={markdownRemark.frontmatter.category == 'gallery' ? 2 : 1}>
       <div className="blog">
         <div className="wrap">
           <div className="left category list"></div>
@@ -44,6 +44,6 @@ export default function index({ data, pageContext }) {
           </div>
         </div>
       </div>
-    </HomeLayout>
+    </MainLayout>
   )
 }

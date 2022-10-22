@@ -1,9 +1,9 @@
 import React from "react"
-import { HomeLayout } from "../components/Layout"
+import { MainLayout } from "../components/Layout"
 
 export default function index() {
   return (
-    <HomeLayout index={0}>
+    <MainLayout index={0}>
       <div className="about">
         <section className="career">
           <div className="wrap">
@@ -67,6 +67,6 @@ export default function index() {
           </div>
         </section>
       </div>
-    </HomeLayout>
+    </MainLayout>
   )
 }

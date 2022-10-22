@@ -1,12 +1,12 @@
 import React from "react"
-import { HomeLayout } from "../components/Layout"
+import { MainLayout } from "../components/Layout"
 import { graphql } from "gatsby"
 import { Link } from 'gatsby'
 import PostListItem from "../components/PostListItem"
 
 export default function index({ data: { allMarkdownRemark: { edges } } }) {
   return (
-    <HomeLayout index={1}>
+    <MainLayout index={1}>
       <div className="blog">
         <div className="wrap">
           <div className="left category list"></div>
@@ -26,7 +26,7 @@ export default function index({ data: { allMarkdownRemark: { edges } } }) {
           </div>
         </div>
       </div>
-    </HomeLayout>
+    </MainLayout>
   );
 }
 

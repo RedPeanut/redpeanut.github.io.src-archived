@@ -31,18 +31,18 @@ export function PlainLayout({ children }) {
   )
 }
 
-interface HomeLayoutProps {
+interface MainLayoutProps {
   index: number
   children?: ReactNode
 }
 
-export function HomeLayout({ index = 0, children }: HomeLayoutProps) {
+export function MainLayout({ index = 0, children }: MainLayoutProps) {
 
   //const [selected, setSelected] = useState(0)
   //console.log("index = " + index)
 
   return (
-    <Layout className="home layout">
+    <Layout className="main layout">
         <header>
           <div className="wrap">
             <h1>
