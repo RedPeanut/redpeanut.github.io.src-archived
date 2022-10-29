@@ -30,7 +30,8 @@
     "prismjs": "^1.28.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-redux": "5.1.2"
   },
   "devDependencies": {
     "@types/gh-pages": "^3.2.1",
