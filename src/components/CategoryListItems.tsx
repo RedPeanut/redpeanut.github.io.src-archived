@@ -60,8 +60,8 @@ class CategoryListItems extends React.Component<Props> {
     //const { searchVal, category, module } = this.props;
     const _category = this.props.category || "color";
     const _module = this.props.module || "converter";
-    console.log("_category = ", _category);
-    console.log("_module = ", _module);
+    //console.log("_category = ", _category);
+    //console.log("_module = ", _module);
 
     return (
       <ul>
